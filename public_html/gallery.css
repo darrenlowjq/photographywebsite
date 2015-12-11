@@ -1,0 +1,45 @@
+.nav a{
+    color: black;
+    font-size: 15px;
+    width: 60px;
+    text-decoration: none;
+    float: right;
+}
+
+.nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding-top: 70px;
+    float: right;
+}
+
+.nav li{
+    display: inline-block;
+}
+
+.top{
+    display: block;
+    float: left;
+}
+
+.nav, .top {
+    display: inline-block;
+    width: auto;
+    padding-bottom: 10px;
+}
+
+.gallery{
+
+}
+
+.topborder{
+    border-top:2px solid black;
+    padding-top:50px;
+    width:100%
+}
+
+.bottomborder{
+    border-bottom:2px solid black;
+    padding-bottom:50px;
+    width:100%
+}
