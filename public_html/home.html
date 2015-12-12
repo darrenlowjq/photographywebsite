@@ -4,6 +4,9 @@
         <title>Darren Low UW Photography</title>
         <link href="home.css" rel="stylesheet">
         <link rel="icon" href="assets/favicon.ico" type="image/x-icon" sizes="16x16">
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.fb.albumbrowser.js"></script>
+        <link rel="stylesheet" type="text/css" href="jquery.fb.albumbrowser.css" />
     </head>
     <body>
         <div class="top">
@@ -26,7 +29,38 @@
         
         <div class="homegallery">
             <div class="container">
-                <iframe src="http://500pxwidget.com/sl/?u=ZGFycmVubG93anF8aW58MTAwfDJ8M3x8eWVzfDV8VW5kZXJ3YXRlcg==" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:115px; height: 115px" ></iframe>
+                <div class="fb-album-container">
+                </div>
+                <script type="text/javascript">
+                      $(document).ready(function () {
+                        $(".fb-album-container").FacebookAlbumBrowser({
+                            account: "darrenlowphotography",
+                            accessToken: "775908159169504|cYEIsh0rs25OQQC8Ex2hXyCOut4",
+                            skipAlbums: ['Home','Profile Pictures'],
+                            showAccountInfo: false,
+                            showImageCount: false,
+                            showImageText: false,
+                            lightbox: true,
+
+                            photosCheckbox: false,
+                            thumbnailSize: 300,
+                            photoChecked: function(photo){
+                                console.log("PHOTO CHECKED: " + photo.id + " - " + photo.url + " - " + photo.thumb);
+                                console.log("CHECKED PHOTOS COUNT: " + this.checkedPhotos.length);
+                            },
+                            photoUnchecked: function (photo) {
+                                console.log("PHOTO UNCHECKED: " + photo.id + " - " + photo.url + " - " + photo.thumb);
+                                console.log("CHECKED PHOTOS COUNT: " + this.checkedPhotos.length);
+                            },
+                            albumSelected: function (photo) {
+                                console.log("ALBUM CLICK: " + photo.id + " - " + photo.url + " - " + photo.thumb);
+                            },
+                            photoSelected: function (photo) {
+                                console.log("PHOTO CLICK: " + photo.id + " - " + photo.url + " - " + photo.thumb);
+                            }
+                        });
+                    });
+                </script>
             </div>
         </div>
         

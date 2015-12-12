@@ -3,8 +3,9 @@
     display: inline-block;
     margin: 0px;
     margin-left: 10px;
-    font-weight: lighter;
-    color: rgba(59, 89, 152, 1);
+    font-weight: bold;
+    color: black;
+    font-size: 25px;
 }
 
 h3.fb-album-heading {
@@ -27,7 +28,7 @@ ul.fb-albums, ul.fb-photos {
     background-image:none;
 }
 .fb-loading-image{
-    background-image:url('loader.gif') !important;
+    background-image:url('assets/loader.gif') !important;
     background-position: center center;
     background-repeat:no-repeat;
 }
@@ -36,7 +37,7 @@ ul.fb-albums, ul.fb-photos {
     border-radius: 6px;
     width: 64px;
     height: 64px;
-    background-image: url('loader.gif');
+    background-image: url('assets/loader.gif');
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -52,7 +53,7 @@ li.fb-album, li.fb-photo {
     /*margin-top: -4px;
     margin-bottom: 3px;
     margin-right: 3px;*/
-    background-image: url('loader.gif');
+    background-image: url('assets/loader.gif');
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -140,12 +141,12 @@ img.fb-albums-list {
 
 /*Simple lightbox*/
 .fb-preview-overlay {
-    background-color: rgba(72, 72, 72, 0.8);
+    background-color: rgba(72, 72, 72, 0.95);
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: 999;
-    background-image: url('loader.gif');
+    background-image: url('assets/loader.gif');
     background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
@@ -217,7 +218,7 @@ img.fb-comment-account {
     display: inline-block;
     width: 50px;
     height: 50px;
-    background-image: url('loader.gif');
+    background-image: url('assets/loader.gif');
     background-position: center center;
     background-repeat: no-repeat;
 }
