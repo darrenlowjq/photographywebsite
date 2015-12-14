@@ -7,6 +7,22 @@
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script type="text/javascript" src="jquery.fb.albumbrowser.js"></script>
         <link rel="stylesheet" type="text/css" href="jquery.fb.albumbrowser.css" />
+        <script type="text/javascript" src="fb-photo-stream.min.js"></script>
+        <script type="text/javascript" src="jquery.innerfade.js"></script>
+        <script type="text/javascript">
+            $(document).ready(
+                        function(){
+                                $('#galleryslide').innerfade({
+                                        animationtype: 'slide',
+                                        speed: 750,
+                                        timeout: 2000,
+                                        type: 'sequence',
+                                        containerheight: 'auto'
+                                });
+                        }
+                    );
+        </script>
+
     </head>
     <body>
         <div class="top">
@@ -29,6 +45,15 @@
         
         <div class="homegallery">
             <div class="container">
+                <div id="fbPhotoStream"></div>
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $('#fbPhotoStream').fbPhotoStream({
+                                album:'1635915306631033'
+                            });
+                        });
+                    </script>
+                <!--
                 <div class="fb-album-container">
                 </div>
                 <script type="text/javascript">
@@ -41,7 +66,6 @@
                             showImageCount: false,
                             showImageText: false,
                             lightbox: true,
-
                             photosCheckbox: false,
                             thumbnailSize: 300,
                             photoChecked: function(photo){
@@ -61,6 +85,7 @@
                         });
                     });
                 </script>
+                -->
             </div>
         </div>
         
